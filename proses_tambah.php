@@ -3,6 +3,8 @@ include("connect.php");
 
 if (isset($_POST['daftar'])) {
 
+
+
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
     $telp = $_POST['telp'];
@@ -10,6 +12,13 @@ if (isset($_POST['daftar'])) {
 
     mysqli_query($db, "INSERT INTO mahasiswa VALUES ('','$nama', '$alamat', '$telp', '$prodi')");
 
-    // mengalihkan halaman kembali ke index.php
-    header("location:index.php");
+    // mengalihkan halaman kembali ke index.
+    // echo "Data Berhasil Disimpan";
+?>
+<script type="text/javascript">
+    alert('Data Berhasil ditambahkan');
+    window.location.href='index.php';
+</script>
+    <?php
 }
+?>

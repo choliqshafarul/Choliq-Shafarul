@@ -12,6 +12,8 @@ while ($d = mysqli_fetch_array($data)) {
 
     <head>
         <title>Belajar PHP | Edit Data</title>
+        <link rel="stylesheet" href="style1.css">
+
     </head>
 
     <body>

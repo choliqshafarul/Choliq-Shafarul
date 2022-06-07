@@ -11,7 +11,16 @@ if (isset($_POST['simpan'])) {
 
     $sql = "UPDATE `mahasiswa` SET `nama` = '$nama', `alamat` = '$alamat', `telp` = '$telp', `prodi` = '$prodi' WHERE `mahasiswa`.`id_mahasiswa` = $id;";
     $query = mysqli_query($db, $sql);
-    header('Location: index.php');
+// header('Location: index.php');
+
+    ?>
+<script type="text/javascript">
+    alert('Data Berhasil Diedit');
+    window.location.href='index.php';
+</script>
+    <?php
+}
+?>
 
 //     if ($query) {
 
